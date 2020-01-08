@@ -16,9 +16,11 @@ search=()=>{
         let list= ``;             
         for (let el of result.Search){
           list+=`<div class="film" >`;           
+          list += `<button class="btn btn--new " onclick='addFavorite(this)' value='${el.imdbID}'>Favorite</button>`;
           list += `<div class="film__poster" style="background-image:url(${el.Poster})"></div>`;
           list += `<div class="film__title " >${el.Title}</div>`;
           list += `<button class="btn " onclick='details(this)' value='${el.imdbID}'>DETAILS</button>`;
+            
           list += `</div>`;            
         }
       
@@ -68,15 +70,22 @@ pg=(elem)=>{
   })
 }
 
-
 let info=[];
-details=(elem)=>{  
+addFavorite=(elem)=>{
   console.log(elem.value);
   let val=elem.value;
   localStorage.setItem('details',JSON.stringify(elem.value));
   let   i = JSON.parse(localStorage.getItem('details'));
   info.push(i);
   localStorage.setItem('details',JSON.stringify( info));
+}
+
+
+details=(elem)=>{  
+  console.log(elem.value);
+  let val=elem.value;
+  
+ 
 // console.log(info);
 
   //---//

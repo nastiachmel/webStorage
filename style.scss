@@ -195,6 +195,18 @@ h1, h2 {
     height: 40px;
 
   }
+
+  &--new{
+    margin: 0;
+    background-color: transparent;
+    color: rgb(195, 12, 12);
+
+    &:hover{
+      background-color: transparent;
+      color: purple;
+    }
+  
+  }
 }
 
 .film-list{
@@ -249,12 +261,13 @@ h1, h2 {
     margin: 15px  ;
     padding: 15px;
     box-sizing: border-box;
-    transition-duration: 0.3s;
+   
 
     &:hover{
       background-color: beige;
       transform: scale(1.1);
       cursor: pointer;
+      transition-duration: 0.3s;
     }
 
     &--empty{

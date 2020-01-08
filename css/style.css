@@ -202,6 +202,17 @@ h1, h2 {
   height: 40px;
 }
 
+.btn--new {
+  margin: 0;
+  background-color: transparent;
+  color: #c30c0c;
+}
+
+.btn--new:hover {
+  background-color: transparent;
+  color: purple;
+}
+
 .film-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,8 +272,6 @@ h1, h2 {
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
 }
 
 .film:hover {
@@ -270,6 +279,8 @@ h1, h2 {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .film--empty {
